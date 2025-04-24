@@ -10,6 +10,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "minimist": "^1.2.8",
     "tweetnacl": "^1.0.3",
     "typescript": "^5.8.3",
     "uuid": "^11.1.0"
