@@ -1,0 +1,19 @@
+{
+    "name": "",
+    "settings": {
+        "clients": [
+            {
+                "id": ""
+            }
+        ]
+    },
+    "stream": {
+        "settings": {
+            "network": "tcp",
+            "security": {
+                "publicKey": "",
+                "privateKey": ""
+            }
+        }
+    }
+}
