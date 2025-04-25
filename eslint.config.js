@@ -7,11 +7,17 @@ export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts}'],
     plugins: { js },
-    extends: ['js/recommended']
+    extends: ['js/recommended'],
+    env: {
+      node: true
+    }
   },
   {
     files: ['**/*.{js,mjs,cjs,ts}'],
-    languageOptions: { globals: globals.browser }
+    languageOptions: { globals: globals.browser },
+    env: {
+      node: true
+    }
   },
   tseslint.configs.recommended
 ])
