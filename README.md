@@ -13,5 +13,5 @@ xcfg tools
 **Usage:**
 
 ```shell
-node index.js
+node index.js --name test
 ```
