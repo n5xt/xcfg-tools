@@ -72,6 +72,15 @@ const schema = {
   additionalProperties: false
 }
 
+// Helper to format validation errors
+function formatErrors(errors) {
+  return errors
+    .map(error =>
+      `${error.keyword} ${error.dataPath} ${error.message}`
+    )
+    .join('\n');
+}
+
 const run = () => {
   // cli args
   const args = minimist(process.argv.slice(2))
@@ -83,11 +92,11 @@ const run = () => {
   const validate = ajv.compile(schema)
   const valid = validate(config)
   if (!valid) {
-    // print errors
-    console.error(validate.errors)
+    // Format and display validation errors
+    console.error('Validation failed:', formatErrors(validate.errors));
   } else {
-    // print result
-    console.log(JSON.stringify(config))
+    // Output valid configuration
+    console.log(JSON.stringify(config, null, 2));
   }
 }
 
